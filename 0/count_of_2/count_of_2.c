@@ -49,5 +49,6 @@ int main(int argc, char **argv)
     return 0;
 }
 
+// Comment main and includes for exam - they are extra
 // To compile: gcc count_of_2.c
 // To run: ./a.out 25
