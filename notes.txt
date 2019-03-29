@@ -1,0 +1,18 @@
+Piscine Interview - Exam 00
+1: volume_histogram for 45 potential points 
+1: longest_subarray for 50 potential points 
+0: equation
+0: count_of_2 for 50 potential points (Success)
+
+Piscine Interview - Exam 02
+1: convert_bst
+0: height_tree
+
+Piscine Interview - Exam 03
+1: is_looping
+0: is_anagram
+0: longest_sequence
+
+Piscine Interview - Exam 05
+1: width_tree
+0: find_pivot
