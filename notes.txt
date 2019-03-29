@@ -16,3 +16,9 @@ Piscine Interview - Exam 03
 Piscine Interview - Exam 05
 1: (lvl_3) width_tree
 0: (lvl_0) find_pivot
+
+---------------------------------------
+typedef 
+https://overiq.com/c-programming-101/typedef-statement-in-c/ 
+Syntax: typedef data_type new_name;
+
