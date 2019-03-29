@@ -41,7 +41,7 @@ int height_tree(struct s_node *root)
 {
 
     if (!root)
-        return 0;
+        return (-1);
 
     int max = 0;
     while (*root->nodes)
