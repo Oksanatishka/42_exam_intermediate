@@ -67,3 +67,90 @@ Example 5:
 (here is a root with no children)
 In this case, your function should return 1.
 */
+
+
+typedef struct s_node {
+    int value;
+    struct s_node *left;
+    struct s_node *right;
+} Node;
+
+#define MAX(a, b) (a > b ? a : b)
+
+int longest(Node* n) {
+    if (!n)
+        return 0;
+    return MAX(longest(n->left), longest(n->right)) + 1;
+}
+
+int width_tree(Node* n) {
+
+    if (!n)
+        return 0;
+
+    int width = longest(n->left) + longest(n->right) + 1;
+
+    return MAX(MAX(width_tree(n->left), width_tree(n->right)), width);
+}
+
+/************
+  Test Main
+************/
+
+#include <stdio.h>
+#include <stdlib.h>
+Node* b(int v) {
+    Node* new = malloc(sizeof(Node));
+    new->value = v;
+    new->left = new->right = 0;
+    return new;
+}
+int main() {
+    Node* r = b(1);
+
+    r->left = b(2);
+    r->left->left = b(3);
+    r->left->right = b(4);
+    r->left->right->left = b(6);
+
+    r->right = b(5);
+    r->right->left = b(7);
+    r->right->right = b(8);
+
+    printf("%d\n", width_tree(r));
+
+    Node* a = b(1);
+
+    a->left = b(2);
+    a->left->left = b(4);
+    a->left->left->left = b(5);
+    a->left->left->left->right = b(8);
+
+    a->left->left->right = b(6);
+    a->left->right = b(7);
+    a->left->right->left = b(9);
+    a->left->right->left->left = b(11);
+    a->left->right->left->right = b(12);
+
+    a->left->right->right = b(10);
+    a->left->right->right->right = b(13);
+
+    a->right = b(3);
+    printf("%d\n", width_tree(a));
+
+    Node* c = b(10);
+    c->right = b(12);
+    printf("%d\n", width_tree(c));
+
+    Node *d = b(25);
+    d->left = b(33);
+    d->left->left = b(12);
+    d->left->right = b(9);
+    d->left->right->left = b(3);
+    printf("%d\n", width_tree(d));
+
+    Node *e = b(10);
+    printf("%d\n", width_tree(e));
+
+    return 0;
+}
