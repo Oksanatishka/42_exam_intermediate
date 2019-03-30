@@ -46,3 +46,22 @@ EXAMPLE :
      /   \   61
     67   37
 */
+
+
+typedef struct s_node {
+    int           value;
+    struct s_node *right;
+    struct s_node *left;
+} Node;
+
+void reverse_tree(struct s_node *root) {
+
+	Node* tmp = root->left;
+	root->left = root->right;
+	root->right = tmp;
+
+	if (root->left)
+		reverse_tree(root->left);
+	if (root->right)
+		reverse_tree(root->right);
+}
