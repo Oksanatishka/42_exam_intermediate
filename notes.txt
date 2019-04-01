@@ -5,8 +5,12 @@ Piscine Interview - Exam 00
 0: (lvl_0) count_of_2 for 50 potential points (Success)
 
 Piscine Interview - Exam 02
-1: (lvl_3) convert_bst
-0: (lvl_1) height_tree 
+1: (lvl_3) perimeter for 40 potential points (Failure)
+1: (lvl_3) convert_bst for 45 potential points (Failure)    <--
+1: (lvl_4) intersection for 50 potential points (Failure)   
+0: (lvl_1) height_tree for 40 potential points (Success)    <--
+0: (lvl_1) stack for 45 potential points (Failure)          
+0: (lvl_2) reverse_tree for 50 potential points (Failure)
 
 Piscine Interview - Exam 03
 1: (lvl_2) is_looping
