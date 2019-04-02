@@ -1,6 +1,6 @@
 Piscine Interview - Exam 00
-1: (lvl_4) volume_histogram for 45 potential points 
-1: (lvl_4) longest_subarray for 50 potential points 
+1: (lvl_4) volume_histogram for 45 potential points (Failure)
+1: (lvl_4) longest_subarray for 50 potential points (Failure)
 0: (lvl_0) equation
 0: (lvl_0) count_of_2 for 50 potential points (Success)
 
