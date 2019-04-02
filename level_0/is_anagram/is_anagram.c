@@ -41,12 +41,12 @@ int is_anagram(char *a, char *b)
     int i = -1;
 
     while (a && a[++i])
-    {
         checka[a[i] - 32]++;
-    }
+    
     i = -1;
     while (b && b[++i])
         checkb[b[i] - 32]++;
+    
     i = -1;
     while (++i < 127 - 32)
     {
