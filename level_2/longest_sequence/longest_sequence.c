@@ -82,3 +82,31 @@ int	longest_sequence(struct s_node *node)
 	penetrate_deep(node, node->right, 1, &n);
 	return (n);
 }
+
+
+// TEST - remove before submitting
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+Node *newNode(int val){
+    Node *node = malloc(sizeof(Node));
+
+    node->value = val;
+    node->left = 0;
+    node->right = 0;
+
+    return node;
+}
+int main(){
+    Node *n = newNode(6);
+
+    n->left = newNode(7);
+    n->left->left = newNode(8);
+    n->left->left->left = newNode(9);
+
+    printf("%d", longest_sequence(n));
+
+    return 0;
+}
