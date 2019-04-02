@@ -59,3 +59,35 @@ Example 4:
 3    2    8
 In this case, your function should return 0.
 */
+
+
+typedef struct s_node
+{
+    int value;
+    struct s_node *left;
+    struct s_node *right;
+} Node;
+
+int	count_node(Node *n)
+{
+	if (!n)
+		return (0);
+	return count_node(n->left) + count_node(n->right) + 1;
+}
+
+int validate(Node *n, int total)
+{
+	if (!n)
+		return (0);
+	int cnt = count_node(n->left) + count_node(n->right) + 1;
+	if (total - cnt == cnt)
+		return (1);
+	return (validate(n->left, total) || validate(n->right, total));
+}
+
+int can_split(struct s_node *n) {
+    int total = count_node(n);
+    if (total % 2)
+        return 0;
+	return validate(n, total);
+}
