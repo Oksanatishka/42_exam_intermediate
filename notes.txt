@@ -13,9 +13,9 @@ Piscine Interview - Exam 02
 0: (lvl_2) reverse_tree for 50 potential points (Failure)
 
 Piscine Interview - Exam 03
-1: (lvl_2) is_looping
-0: (lvl_0) is_anagram
-0: (lvl_2) longest_sequence
+0: (lvl_2) is_looping for 50 potential points (Success)
+1: (lvl_2) longest_sequence for 45 potential points (Success)
+0: (lvl_0) is_anagram for 50 potential points (Failure)
 
 Piscine Interview - Exam 05
 1: (lvl_3) width_tree
